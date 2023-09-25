@@ -34,16 +34,6 @@ function ketQuaDuThi() {
         "ketquaduthi"
       ).innerText = `Xin chia buồn bạn chỉ đạt ${tongDiem}`;
     }
-  
-    console.log({
-      diem3,
-      diem2,
-      diem1,
-      diemChuan,
-      diemKhuVuc,
-      diemDoiTuong,
-      tongDiem,
-    });
   }
 
 // Bài 2
@@ -79,10 +69,52 @@ function tinhTienDien() {
         150 * tienDien200Den350kw +
         (soDien - 350) * tienDienCaoNhat;
     }
-  
     document.getElementById(
       "sotiendien"
     ).innerText = `Họ tên: ${hoTen}, số tiền điện bạn phải trả là ${tienDien.toLocaleString()} VND`;
   }
   
+// Bài 3
+function tinhThueThuNhap() {
+    var thuNhap = document.getElementById("income").value * 1;
+    var person = document.getElementById("person").value * 1;
+    var thuNhapChiuThue = thuNhap - 4 - person * 1.6;
+    var tienThue;
+    if (thuNhapChiuThue <= 60) {
+      tienThue = thuNhapChiuThue * 0.05;
+    } else if (thuNhapChiuThue > 60 && thuNhapChiuThue <= 120) {
+      tienThue = 60 * 0.05 + (thuNhapChiuThue - 60) * 0.1;
+    } else if (thuNhapChiuThue > 120 && thuNhapChiuThue < 210) {
+      tienThue = 60 * 0.05 + 60 * 0.1 + (thuNhapChiuThue - 120) * 0.15;
+    } else if (thuNhapChiuThue > 210 && thuNhapChiuThue <= 384) {
+      tienThue = 60 * 0.05 + 60 * 0.1 + 90 * 0.15 + (thuNhapChiuThue - 210) * 0.2;
+    } else if (thuNhapChiuThue > 384 && thuNhapChiuThue <= 624) {
+      tienThue =
+        60 * 0.05 +
+        60 * 0.1 +
+        90 * 0.15 +
+        174 * 0.2 +
+        (thuNhapChiuThue - 384) * 0.25;
+    } else if (thuNhapChiuThue > 624 && thuNhapChiuThue <= 960) {
+      tienThue =
+        60 * 0.05 +
+        60 * 0.1 +
+        90 * 0.15 +
+        174 * 0.2 +
+        240 * 0.25 +
+        (thuNhapChiuThue - 624) * 0.3;
+    } else {
+      tienThue =
+        60 * 0.05 +
+        60 * 0.1 +
+        90 * 0.15 +
+        174 * 0.2 +
+        240 * 0.25 +
+        336 * 0.3 +
+        (thuNhapChiuThue - 960) * 0.35;
+    }
+    document.getElementById(
+      "sotienthue"
+    ).innerText = `Số tiền đóng thuế thu nhập cá nhân là ${tienThue.toLocaleString()} triệu đồng`;
+  }
   

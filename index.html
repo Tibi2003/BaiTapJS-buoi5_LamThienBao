@@ -125,11 +125,57 @@
           <button class="btn btn-danger rounded-2" onclick="tinhTienDien()">
             Tính tiền điện
           </button>
-          <br />
           <div class="btn">
             <div id="sotiendien">Kết quả:</div>
           </div>
     </div>
+
+    <!-- Bài 3 -->
+    <h2>Tính thuế thu nhập cá nhân</h2>
+          <p>
+            Bạn cần nhập họ tên, Thu nhập theo năm và Số Người phụ thuộc.
+          </p>
+          <div class="mb-3">
+            <label for="" class="form-label">Họ tên của bạn</label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id="name"
+              aria-describedby="helpId"
+              placeholder="Nhập họ tên"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label"
+              >Thu nhập của bạn (Nhập đơn vị triệu)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              name=""
+              id="income"
+              aria-describedby="helpId"
+              placeholder="Tổng thu nhập năm"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Số người phụ thuộc</label>
+            <input
+              type="number"
+              class="form-control"
+              name=""
+              id="person"
+              aria-describedby="helpId"
+              placeholder="Số người phụ thuộc"
+            />
+          </div>
+          <button class="btn btn-danger rounded-2" onclick="tinhThueThuNhap()">
+            Tính thuế thu nhập
+          </button>
+          <div class="btn">
+            <div id="sotienthue">Kết quả:</div>
+          </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
