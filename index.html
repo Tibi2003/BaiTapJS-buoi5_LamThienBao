@@ -93,11 +93,42 @@
             Xem kết quả
           </button>
           <div class="ketqua">
-            Kết quả:
-            <div id="ketquaduthi"></div>
+            <div id="ketquaduthi">Kết quả:</div>
           </div>
         </div>
-        <div
+    </div>
+
+    <!-- Bài 2 -->
+    <div class="container">
+        <h2 class="text-center">Tính tiền điện</h2>
+          <p>
+            Nhập thông tin số điện đã tiêu thụ trong tháng.
+          </p>
+          <div class="mb-3">
+            <input
+            type="text"
+            class="form-control"
+            name=""
+            id="ho-ten"
+            aria-describedby="helpId"
+            placeholder="Nhập họ tên"
+            />
+            <input
+              type="number"
+              class="form-control"
+              name=""
+              id="so-dien"
+              aria-describedby="helpId"
+              placeholder="Số điện đã tiêu thụ"
+            />
+          </div>
+          <button class="btn btn-danger rounded-2" onclick="tinhTienDien()">
+            Tính tiền điện
+          </button>
+          <br />
+          <div class="btn">
+            <div id="sotiendien">Kết quả:</div>
+          </div>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
