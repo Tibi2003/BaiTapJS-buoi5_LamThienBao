@@ -92,15 +92,15 @@
           <button class="btn btn-danger rounded-2" onclick="ketQuaDuThi()">
             Xem kết quả
           </button>
-          <div class="ketqua">
+          <div class="btn">
             <div id="ketquaduthi">Kết quả:</div>
           </div>
         </div>
     </div>
 
     <!-- Bài 2 -->
-    <div class="container">
-        <h2 class="text-center">Tính tiền điện</h2>
+    <div class="container mt-5">
+        <h2>Tính tiền điện</h2>
           <p>
             Nhập thông tin số điện đã tiêu thụ trong tháng.
           </p>
@@ -131,7 +131,8 @@
     </div>
 
     <!-- Bài 3 -->
-    <h2>Tính thuế thu nhập cá nhân</h2>
+    <div class="container mt-5">
+        <h2>Tính thuế thu nhập cá nhân</h2>
           <p>
             Bạn cần nhập họ tên, Thu nhập theo năm và Số Người phụ thuộc.
           </p>
@@ -176,6 +177,58 @@
           <div class="btn">
             <div id="sotienthue">Kết quả:</div>
           </div>
+    </div>
+
+    <!-- Bài 4 -->
+    <div class="container mt-5">
+        <h2>Tính tiền cap</h2>
+          <p>
+            Nhập loại khách hàng, mã khách hàng, số kênh cao cấp và số kết nối
+            để tính giá thành cap.
+          </p>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="khu-vuc-uu-tien"
+              >Loại khách hàng</label
+            >
+            <select
+              class="form-select"
+              id="loaikhachhang"
+              onchange="batKhachHangDoanhNghiep()"
+            >
+              <option selected>Loại khách hàng</option>
+              <option value="canhan">Nhà dân</option>
+              <option value="doanhnghiep">Doanh nghiệp</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Mã khách hàng</label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id="makhachhang"
+              aria-describedby="helpId"
+              placeholder="Nhập mã khách hàng"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Số kênh cao cấp</label>
+            <input
+              type="number"
+              class="form-control"
+              name=""
+              id="sokenh"
+              aria-describedby="helpId"
+              placeholder="Số kênh cao cấp"
+            />
+            <div class="mb-3" id="doanhnghiep"></div>
+            <button class="btn btn-danger rounded-2" onclick="tinhTienCap()">
+              Tính tiền cap
+            </button>
+            <div class="btn">
+              <div id="tiencap">Kết quả:</div>
+            </div>
+    </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

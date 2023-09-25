@@ -118,3 +118,53 @@ function tinhThueThuNhap() {
     ).innerText = `Số tiền đóng thuế thu nhập cá nhân là ${tienThue.toLocaleString()} triệu đồng`;
   }
   
+// Bài 4
+var loaiKhachHang;
+function batKhachHangDoanhNghiep() {
+  loaiKhachHang = document.getElementById("loaikhachhang").value;
+  if (loaiKhachHang == "doanhnghiep") {
+    document.getElementById(
+      "doanhnghiep"
+    ).innerHTML = `<label for="" class="form-label">Số kết nối</label>
+    <input
+      type="text"
+      class="form-control"
+      name=""
+      id="soketnoi"
+      aria-describedby="helpId"
+      placeholder="Số kết nối"
+    />`;
+  } else {
+    document.getElementById("doanhnghiep").innerHTML = "";
+  }
+}
+
+var phiXuLyHoaDon, phiDichVuCoBan, phiThue1Kenh, soKenh, soTienCap;
+function tinhTienCap() {
+  var tenKhachHang = document.getElementById("makhachhang").value;
+  loaiKhachHang = document.getElementById("loaikhachhang").value;
+  soKenh = document.getElementById("sokenh").value * 1;
+  if (loaiKhachHang == "canhan") {
+    phiXuLyHoaDon = 4.5;
+    phiDichVuCoBan = 20.5;
+    phiThue1Kenh = 7.5;
+    var phiThueKenh = phiDichVuCoBan + phiXuLyHoaDon + soKenh * phiThue1Kenh;
+  } else {
+    var soKetNoi = document.getElementById("soketnoi").value * 1;
+    if (soKetNoi <= 10) {
+      phiXuLyHoaDon = 15;
+      phiDichVuCoBan = 75;
+      phiThue1Kenh = 50;
+      var phiThueKenh = phiDichVuCoBan + phiXuLyHoaDon + soKenh * phiThue1Kenh;
+    } else {
+      phiXuLyHoaDon = 15;
+      phiDichVuCoBan = 75 + (soKetNoi - 10) * 5;
+      phiThue1Kenh = 50;
+      var phiThueKenh = phiDichVuCoBan + phiXuLyHoaDon + soKenh * phiThue1Kenh;
+    }
+  }
+  console.log(phiThueKenh, loaiKhachHang, tenKhachHang);
+  document.getElementById(
+    "tiencap"
+  ).innerText = `Số tiền cap mà ${tenKhachHang} phải đóng là ${phiThueKenh.toLocaleString()}$`;
+}
